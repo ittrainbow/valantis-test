@@ -1,7 +1,7 @@
 import { AxiosError } from 'axios'
 import md5 from 'md5'
 
-export const baseURL = 'http://api.valantis.store:40000/'
+export const baseURL = 'https://api.valantis.store:40000/'
 
 export const token = md5(
   'Valantis_' + new Date().toISOString().replace(/-/g, '').slice(0, 8)
