@@ -82,7 +82,7 @@ export const fetchItems = async (ids: string[]): Promise<ValantisItem[]> => {
     const decimal = parseInt(item.id.substring(0, 2), 16) % 50
     return {
       ...item,
-      img: `/src/assets/jewelry/image${decimal}.jpg`
+      img: `/jewelry/image${decimal}.jpg`
     }
   })
 

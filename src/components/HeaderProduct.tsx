@@ -10,16 +10,18 @@ type Props = {
 
 export const HeaderProduct = ({ item }: Props) => {
   const navigate = useNavigate()
-  const { id, product, price, img } = item
-  const { removeFromCart, setPage, clearSearch } = appStore
+  const { id, product, price, brand, img } = item
+  const { removeFromCart, setPage, clearSearch, brandFilter } = appStore
 
   const { list } = useList()
 
   const handleClick = () => {
-    navigate('/')
+    if (brandFilter && brand !== brandFilter) {
+      navigate('/')
+      clearSearch()
+    }
     const page = Math.floor(list.map((el) => el.id).indexOf(id) / 50)
     setPage(page)
-    clearSearch()
     setTimeout(() => {
       const elem = document.getElementById(id)
       elem && elem.scrollIntoView({ block: 'end' })
