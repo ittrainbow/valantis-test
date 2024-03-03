@@ -1,0 +1,14 @@
+.footer {
+  @include flex-allcenter;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: white;
+  border-radius: 12px;
+
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    column-gap: 24px;
+  }
+}

@@ -1,0 +1,47 @@
+$base-red: rgb(160, 40, 56);
+$base-red-transparent: rgb(160, 40, 56, 0.05);
+$grey1: rgb(38, 38, 38);
+$grey2: rgb(64, 64, 64);
+$grey3: rgb(224, 224, 224);
+$itembg-color: rgb(240, 240, 240);
+$calcwidth: min(50rem, calc(100% - 2rem));
+$bigcalcwidth: min(80rem, calc(100% - 4rem));
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+@mixin flex-allcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.icon-button {
+  position: relative;
+  flex-shrink: 0;
+  padding: 6px;
+  font-size: 28px !important;
+  border-radius: 8px;
+  color: $grey2;
+  transition: 0.22s ease-in-out;
+  max-height: 40px;
+
+  &:hover {
+    color: $grey1;
+    background-color: $grey3;
+  }
+
+  &:active {
+    background-color: white;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

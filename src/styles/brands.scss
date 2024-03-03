@@ -1,0 +1,16 @@
+@import './vars';
+
+.brands {
+  width: $calcwidth;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: $base-red;
+}

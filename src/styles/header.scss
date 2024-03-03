@@ -1,0 +1,84 @@
+@import './vars.scss';
+
+.shadow {
+  box-shadow: 0 0 120px 2px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  &__container {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+    gap: 12px;
+    padding: 12px;
+    background-color: $itembg-color;
+    transition: 0.22s ease-out;
+  }
+
+  &__valantis {
+    display: flex;
+    width: $bigcalcwidth;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 28px;
+    min-width: 130px;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__hidden {
+    top: -240px;
+  }
+
+  &__buttons {
+    @include flex-center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: $calcwidth;
+  }
+
+  &__counter {
+    position: absolute;
+    color: white;
+    background-color: $base-red;
+    top: -5px;
+    inset-inline-end: -5px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    min-width: 20px;
+    padding: 2px 0;
+    border-radius: 100%;
+  }
+
+  &__item,
+  &__price {
+    background: none;
+  }
+
+  &__price {
+    min-width: 140px;
+  }
+}

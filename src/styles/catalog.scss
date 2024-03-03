@@ -1,0 +1,19 @@
+@import './vars';
+.catalog-container {
+  font-family: 'Exo 2';
+  height: 100%;
+  width: $bigcalcwidth;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}

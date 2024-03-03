@@ -1,0 +1,93 @@
+@import './vars';
+
+.header-cart {
+  display: grid;
+  position: absolute;
+  top: 56px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 16px;
+  margin-top: 12px;
+  min-width: 384px;
+  inset-inline-end: 56px;
+  z-index: 10;
+  max-height: calc(100vh - 100px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.not-in-cart {
+  @include flex-center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgb(24, 24, 24);
+  width: 100%;
+
+  &:hover {
+    background-color: rgb(40, 40, 40);
+  }
+
+  &:active {
+    background-color: rgb(56, 56, 56);
+  }
+}
+
+.empty-cart {
+  @include flex-center;
+  flex-direction: column;
+
+  &__icon {
+    height: 36px;
+    width: 36px;
+  }
+
+  &__message {
+    max-width: 320px;
+  }
+}
+
+.in-cart {
+  @include flex-center;
+  max-height: 40px;
+  width: 100%;
+
+  &__icon {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid grey;
+  }
+}
+
+.cart-item {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 340px;
+
+  &__image {
+    display: grid;
+    flex-shrink: 0;
+    position: relative;
+    height: 48px;
+    width: 48px;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__img {
+    max-width: 48px;
+  }
+
+  &__description {
+    display: grid;
+    flex: 1 1 0%;
+    cursor: pointer;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $base-red;
+  }
+}
