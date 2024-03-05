@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 import { appStore } from '../store'
 
-import logo from '../../public/valantis.svg'
+import logo from '/valantis.svg'
 import { HeaderCart } from '.'
 
 export const Header = observer(() => {

@@ -56,7 +56,6 @@ export class FetchedStoreClass {
           const array = ids.slice(100 * i, 100 * (i + 1))
           await fromPromise(fetchItems(array))
             .then((items: ValantisItem[]) => this.setItems(items))
-            .then(() => this.setLoading(false))
             .then(() => i === 0 && this.setLoading(false))
         }
       })
