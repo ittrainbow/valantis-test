@@ -20,7 +20,8 @@ export const Search = () => {
     setSearch(value)
   }
 
-  const handleSearch = () => {
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
     setSearchFilter(search)
     setBrandFilter(null)
     getCustomSearch(search)
